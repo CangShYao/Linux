@@ -40,7 +40,8 @@ vim ~/.vimrc
 # 在.vimrc中添加set nu
 set nu
 
-# 遗留问题，这是对当前Linux用户设置，其他用户（如root）无法享用
+# root用户可以通过编辑/etc/vimrc来实现全局添加
+vim etc/vimrc
 ```
 
 ## bash不显示名字和路径的问题
