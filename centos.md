@@ -52,6 +52,12 @@ vim ~/.bash_profile
 # 在.bash_profile中添加下面语句
 export PS1='[\u@\h \W]\$'
 
+# 这里说一下我自己的配置，普通用户
+PS1="\[\e[32;40m\]\u\[\e[0m\]@\[\e[35;40m\]\h\[\e[0m\]:\W\$ "
+
+# root用户
+PS1='\[\e[37;40m\]\[\e[37;41m\]\u\[\e[37;41m\]@\h\[\e[37;40m\]:\W\$ '
+
 # 使bash配置文件生效
 source ~/.bash_profile
 ```
