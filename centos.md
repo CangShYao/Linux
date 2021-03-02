@@ -52,7 +52,8 @@ vim ~/.bash_profile
 # 在.bash_profile中添加下面语句
 export PS1='[\u@\h \W]\$'
 
-# 这里说一下我自己的配置，普通用户
+# 这里说一下我自己的配置（主机）
+# 普通用户
 PS1="\[\e[32;40m\]\u\[\e[0m\]@\[\e[35;40m\]\h\[\e[0m\]:\W\$ "
 
 # root用户
@@ -88,4 +89,19 @@ java -version
 
 # 如果Java环境没有生效，请检查路径是否正确
 # 请检查参数是否正确
+```
+
+## 本机与服务器传输文件
+
+[^_^]: # 终于不用理会恶心的FTP了
+
+```bash
+# Linux安装lrzsz插件
+yum install -y lrzsz
+
+# 上传文件：输入rz命令
+# mobaXtrem右键终端，点击send file using z-modem
+
+# 下载文件：输入sz filename命令
+# mobaXtrem右键终端，点击receive file using z-modem
 ```
