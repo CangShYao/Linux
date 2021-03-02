@@ -159,7 +159,7 @@ pqCardinality=
 # Default value : false
 # Mandatory     : No
 #-----------------------------------------------------------------------------
-createAsContainerDatabase=true
+createAsContainerDatabase=false
 
 #-----------------------------------------------------------------------------
 # Name          : numberOfPDBs

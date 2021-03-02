@@ -23,11 +23,11 @@ systemctl status firewalld.service
 
 ## 操作步骤(重要)
 
-A、环境准备
-B、用户组创建
-C、修改系统内核参数
-D、修改用户配置
-E、数据库应用安装
+A、环境准备  
+B、用户组创建  
+C、修改系统内核参数  
+D、修改用户配置  
+E、数据库应用安装  
 F、数据库初始化
 
 ### A、环境准备
@@ -429,8 +429,8 @@ sid=orcl
 # 52行
 databaseConfigType=SI
 
-# 162行
-createAsContainerDatabase=true
+# 162行，是否创建容器数据库（容器数据库用户名要C##开头，贼恶心）
+createAsContainerDatabase=false
 
 # 172行
 numberOfPDBs=1
