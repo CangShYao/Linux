@@ -1,0 +1,21 @@
+CREATE TABLESPACE MDM DATAFILE '/u01/app/oracle/oradata/orcl/mdm.DBF' SIZE 500M AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED LOGGING EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+
+
+
+drop tablespace MDM including contents and datafiles;
+
+drop tablespace MDM including contents;
+
+create user c##mdm identified by mdm default tablespace MDM temporary tablespace TEMP;
+
+alter database datafile '/u01/app/oracle/oradata/orcl/mdm.DBF' offline drop;
+
+
+MDM9init_V9.0.14.1.dmp
+
+impdp mdm/mdm directory=DATA_PUMP_DIR  dumpfile=MDM9INIT_V9.0.7.3_BETA.DMP remap_schema=DM9WH_INIT:mdm remap_tablespace=DM9_INIT:MDM,DM85WHINIT:MDM transform=OID:N
+
+
+impdp mdm/mdm directory=DATA_PUMP_DIR  dumpfile=MDM9init_V9.0.14.1.dmp remap_schema=DM9WH_INIT:mdm remap_tablespace=DM9_INIT:MDM,DM85WHINIT:MDM transform=OID:N
+
+tar -zxvf elasticsearch-7.0.0-linux-x86_64.tar.gz -C /u01/mdm/
