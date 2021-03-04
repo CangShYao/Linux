@@ -105,3 +105,14 @@ yum install -y lrzsz
 # 下载文件：输入sz filename命令
 # mobaXtrem右键终端，点击receive file using z-modem
 ```
+
+## git push 443问题
+
+```bash
+# 设置http代理
+
+git config --global https.proxy https://127.0.0.1:7890
+
+# 取消http代理
+git config --global --unset http.proxy
+```
